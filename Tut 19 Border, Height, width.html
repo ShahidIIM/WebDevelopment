@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border, Height, Width, Background Color</title>
+
+    <style>
+        #firstPara{
+            background-color: red ;
+            height: 100px;
+            width: 500px;
+            border: 4px green solid;
+            /* border-width: 4px; 
+            border-color: green;
+            border-style: solid;*/
+            border-radius: 15px;
+        }
+
+        #secondPara{
+            background-color:rgb(0, 0, 0);
+            height: 100px;
+            width: 500px;
+            border-top: 2px solid rgb(252, 3, 11);
+            border-bottom: 2px solid rgb(24, 3, 252);
+            border-left: 2px solid rgb(3, 211, 252);
+            border-right: 2px solid rgb(231, 252, 3);
+            border-top-left-radius: 4px;
+            border-top-right-radius: 14px;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 24px;
+        }
+
+        #thirdPara{
+            height: 500px;
+            width:455px; 
+            background-image: url('https://www.bmwgroup.com/content/dam/grpw/websites/bmwgroup_com/brands/einstiegsseite/1280x854_P90351044_highRes_the-new-bmw-8-series.jpg');
+            border: 2px solid red;
+            background-repeat: no-repeat; /* repeat-x and repeat-y will make it repeat on x and y axis */
+            /* background-position: 192px 34px; */
+            background-position: center center;
+            /* background-position: bottom right; */
+            /* background-position: top center; */ 
+        }
+    </style>
+</head>
+<body>
+    <h3>This is first heading</h3>
+    <p id="firstPara">We are learning a new concept of CSS.</p>
+
+    <h3>This is second heading</h3>
+    <p id="secondPara">We are learning a new concept of CSS.</p>
+
+    <h3>This is third heading</h3>
+    <p id="thirdPara">We are learning a new concept of CSS.</p>
+</body>
+</html>

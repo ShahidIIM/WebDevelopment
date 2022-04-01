@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>News</title>
+    </head>
+    <body>
+        <button id="load" onclick="getData()">LOAD</button>
+        <div id = "container"></div>
+        <script>
+            let container = document.getElementById("container");
+            let API_KEY = "199730ef83854286a05ef0005c689379";
+            async function getData() {
+                let res = await fetch(`https://newsapi.org/v2/top-headlines?sources=techcrunch&apiKey=${API_KEY}`);
+                let data = await res.json();
+                console.log(data)
+                displayData(data);
+            }
+
+            function displayData(data) {
+                let newsCard = document.createElement("div");
+                for (let i of data.articles) {
+                    let title = document.createElement("h2");
+                    title.textContent = i.title;
+                    let author = document.createElement("p");
+                    author.textContent = i.source.author;
+                    let image = document.createElement("img");
+                    image.src = i.urlToImage;
+                    image.height = "200px";
+                    image.width = "250px";
+                    newsCard.append(title, author, image);
+                }
+               
+                container.append(newsCard);
+            }
+        </script>
+    </body>
+
+</html>

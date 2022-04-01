@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marriage_age_validator</title>
+</head>
+<body>
+    <input type="number" id="birthYear">
+    <select id="gender">
+        <option value="">--</option>
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        
+    </select>
+    <button onclick="validator">Submit</button>
+</body>
+
+<script>
+    function validator(){
+        var age = document.getElementById("birthYear").value;
+        var sex = document.getElementById("gender").value;
+        age = (2021 - age)
+        if((age <= 2004) && (sex ==Female)){
+            alert("Get Married")
+        }
+        else if((age <= 2001) && (sex == Male)){
+            alert("Get Married")
+        }else{
+            alert("Not Get Married")
+        }
+    }
+</script>
+</html>

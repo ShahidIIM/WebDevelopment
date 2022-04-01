@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars</title>
+
+    <style>
+    #container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  margin-top: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
+
+  grid-gap: 20px;
+}
+
+#container > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #cecece;
+}
+
+img {
+  width: 90%;
+  height: 225px;
+}
+
+</style>
+
+</head>
+<body>
+    <div id="container"></div>
+
+    <script>
+        let container = document.getElementById("container");
+
+let data = [];
+
+
+fetch("https://swapi.dev/api/people/")
+  .then(function (res) {
+   
+    return res.json();
+  })
+  .then(function (res) {
+    data = res.data;
+    console.log("data:", data);
+    displayData(data);
+  })
+  .catch(function (err) {
+    
+    console.log(err);
+  });
+
+function displayData(data) {
+ 
+  data.forEach(function (user) {
+    let div = document.createElement("div");
+
+    let climate = document.createElement("p");
+
+    climate.innerText = user.climate;
+
+    let diameter = document.createElement("p");
+
+    diameter.innerText = user.diameter;
+
+    let gravity = document.createElement("p");
+
+    gravity.innerText = user.gravity;
+
+    let name = document.createElement("p");
+
+    name.innerText = `${user.first_name} ${user.last_name}`;
+
+    let orbital_period = document.createElement("p");
+
+    orbital_period.innerText = user.orbital_period;
+
+    div.append(climate,diameter, gravity, name, orbital_period);
+
+    container.appendChild(div);
+  });
+}
+
+    </script>
+</body>
+</html>

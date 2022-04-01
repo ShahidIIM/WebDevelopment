@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+
+    <style>
+        
+        h2 {
+            margin: auto;
+            text-align: center;
+            margin-bottom: 30px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+           
+        }
+
+        #container {
+            display: flex;
+            width: 60%;
+            height: auto;
+            margin: auto;
+            margin-bottom: 40px;
+        
+        }
+
+        #container>div {
+            padding-right: 20px;
+           
+        }
+
+        #container>div>img {
+            width: 100%;
+            height: 80%;
+        }
+
+        #container>div>p {
+            color: silver;
+        }
+
+        #container>div>h3 {
+            margin-top: -10px;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #bottom {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(2, auto);
+            width: 55%;
+            margin: auto;
+            gap: 10px;
+            /* background-color: rgb(240, 248, 255); */
+        }
+
+        #bottom>div {
+            background-color: white;
+            border: 1px solid white;
+
+        }
+
+        #bottom>div>img {
+            
+            height: 40%;
+            width: 40%;
+            border-radius: 50%;
+            display: flex;
+            margin: auto;
+        }
+
+        #bottom>div>h3 {
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        #bottom>div>p {
+            margin-top: -10px;
+            margin-left: 20px;
+            color: silver;
+            padding-bottom: 30px;
+        }
+        @media all and (min-width:451px) and (max-width:850px){
+
+            #container{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(2,auto);
+            }
+            
+            #bottom{
+                grid-template-columns: repeat(3,1fr);
+                grid-template-rows: repeat(3,auto);
+            }
+        }
+
+        @media all and (min-width:50px) and (max-width:450px){
+            #container{
+                display:grid;
+                grid-template-columns: repeat(1,1fr);
+                grid-template-rows: repeat(3,auto);
+            }
+
+            #bottom{
+                grid-template-columns: repeat(2,1fr);
+                grid-template-rows: repeat(4,auto);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Our Blog Posts</h2>
+    <div id="container">
+        <div>
+            <img src="https://media.istockphoto.com/photos/modern-minimalist-family-villa-picture-id1254871777?b=1&k=20&m=1254871777&s=170667a&w=0&h=qE1PWe09BaBuedNTBlC9Wwvcll6l3SJ8CLtqGjLVM_w="
+                alt="">
+            <p>29, January 2019</p>
+            <h3>Architectural Art Modern</h3>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/photos/solar-panels-on-the-roof-of-the-modern-family-houses-picture-id1321142166?b=1&k=20&m=1321142166&s=170667a&w=0&h=I8-_l3ukJW6shhDK3VPlcDfLXpjQ-5ivBukPEsmTdqE="
+                alt="">
+            <p>29, January 2019</p>
+            <h3>Architectural Art Modern</h3>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/photos/family-before-going-to-bed-mother-reads-to-her-child-son-book-near-a-picture-id1147132084?b=1&k=20&m=1147132084&s=170667a&w=0&h=6QZYtY6SEklpR2tKZxTR5dRKYZPkB_ZUQf4hi_oKdsQ="
+                alt="">
+            <p>29, January 2019</p>
+            <h3>Architectural Art Modern</h3>
+        </div>
+    </div>
+    <div id="bottom" class="backcolor">
+        <div>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOOLtK6NZWeKLcOHFNP_XUQ_bGGCIEVvHehQ&usqp=CAU"
+                alt="">
+            <h3>Creative Design</h3>
+            <p>Far far away, behind the word mountains, far from &nbsp;&nbsp;&nbsp; the countries Vokalia. </p>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8ZGlnaXRhbCUyMG1hcmtldGluZ3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <h3>Digital Marketing</h3>
+            <p>Far far away, behind the word mountains, far from &nbsp;&nbsp;&nbsp; the countries Vokalia. </p>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/photos/female-ux-architect-has-discussion-with-male-design-engineer-they-on-picture-id846843116?b=1&k=20&m=846843116&s=170667a&w=0&h=V_k_X4G5GrSpqPcnTpmwGTS1CEoIo60gCzgQo-37R30="
+                alt="">
+            <h3>Application Design</h3>
+            <p>Far far away, behind the word mountains, far from &nbsp;&nbsp;&nbsp; the countries Vokalia. </p>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/photos/office-responsive-devices-web-design-website-picture-id1201166649?b=1&k=20&m=1201166649&s=170667a&w=0&h=McSj1y81-Fd6xTXLjWtIPbnHZ9QM467T5HnrAw_4w04="
+                alt="">
+            <h3>Web Development</h3>
+            <p>Far far away, behind the word mountains, far from &nbsp;&nbsp;&nbsp; the countries Vokalia. </p>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1416339134316-0e91dc9ded92?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8YnJhbmRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <h3>Branding</h3>
+            <p>Far far away, behind the word mountains, far from &nbsp;&nbsp;&nbsp; the countries Vokalia. </p>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/photos/modern-living-room-interior-3d-render-picture-id1293762741?b=1&k=20&m=1293762741&s=170667a&w=0&h=2RI8SmBN4MrEZuTvdwRzaeB887x-dukFcQBpyQ-qwS4="
+                alt="">
+            <h3>Graphic Design</h3>
+            <p>Far far away, behind the word mountains, far from &nbsp;&nbsp;&nbsp; the countries Vokalia. </p>
+        </div>
+        <div>
+            <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8ZW1haWwlMjBtYXJrZXRpbmd8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+                alt="">
+            <h3>Email Marketing</h3>
+            <p>Far far away, behind the word mountains, far from &nbsp;&nbsp;&nbsp; the countries Vokalia. </p>
+        </div>
+        <div>
+            <img src="https://media.istockphoto.com/photos/rearview-shot-of-a-designer-working-on-his-computer-picture-id1319188679?b=1&k=20&m=1319188679&s=170667a&w=0&h=KMBzH3sq37KQY59MqK4LmCRUD72x-R8dqmcN8LGCxl4="
+                alt="">
+            <h3>Web Design</h3>
+            <p>Far far away, behind the word mountains, far from &nbsp;&nbsp;&nbsp; the countries Vokalia. </p>
+        </div>
+    </div>
+</body>
+
+</html>
