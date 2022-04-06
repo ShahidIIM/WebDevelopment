@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+</head>
+<body>
+    <h1 id="start">0</h1>
+    <button id="likeButton">Like</button>
+    <button id="unLikeButton">Unlike</button>
+</body>
+
+<script>
+    document.querySelector("#likeButton").addEventListener("click",likeFunction);
+    document.querySelector("#unLikeButton").addEventListener("click",unLikeFunction)
+    var count;
+    if(localStorage.getItem("counter") === null){
+        count=0;
+    }else{
+        count= localStorage.getItem("counter");
+    }
+
+    document.querySelector("h1").innerText=count;
+    function likeFunction(){
+        count++;
+        localStorage.setItem("counter",count);
+        document.querySelector("#start").innerText = count;
+    }
+
+    function unLikeFunction(){
+        count--;
+        localStorage.setItem("counter", count);
+        document.querySelector("#start").innerText = count;
+    }
+   
+</script>
+</html>
