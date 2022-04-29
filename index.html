@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Learning App</title>
+
     <style>
-        .navbar {
-            float: left;
-            list-style: none;
-            margin: 13px 15px;
+        *{
+            text-decoration: none;
+          
+        }
+        h1{
+           margin-top: 50px;
+           text-align: center;
+        }
+        #container{
+           display: flex;
+           margin-left: 15%;
+           margin-top: 4%;
+           gap: 20px;
+        }
+        #container button{
+            padding: 1% 8% 1% 8%;
+            border-radius: 20px;
+            background-color: teal;
+            
+        }
+        a{
+            color: white;
         }
     </style>
 </head>
-
 <body>
-    <nav class="navbar">
-        <ul>
-            <li><a href="">Home</a></li>
-            <li><a href="">Login</a></li>
-        </ul>
-    </nav>
+    <h1>Learning APP</h1>
+    <div id="container">
+        <button id="scope"> <a href="scope.html">Scope</a> </button>
+        <button id="hoisting"> <a href="hoisting.html">Hoisting</a> </button>
+        <button id="constructor"> <a href="constructor.html">Constructor Functions</a> </button>
+        <button id="prototype"> <a href="prototype.html">Prototype</a> </button>
+    </div>
 </body>
+<script>
+    let learningApp;
+    learningApp =JSON.parse( localStorage.getItem("#scope")) || [];
 
+   localStorage.setItem("scope",JSON.stringify(scope))
+   learningApp.show();
+</script>
 </html>
